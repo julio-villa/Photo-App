@@ -1,0 +1,85 @@
+<section id="Posts">
+{% for i in posts %}
+    <section id = "POST">
+        <section id="userp">
+            <section id="name">
+                <h3>{{i.user.get('username')}}</h3>
+            </section>
+            <section id="dots">
+                <h2>...</h2>
+            </section>
+        </section>
+        <section id="imgpost">
+            <img src="{{i.image_url}}" alt="{{i.title}}">
+        </section>
+
+        <section id="actions">
+            <section id="lcs">
+                <section id="like">
+                    <i class="fas fa-heart"></i>
+                </section>
+                <section id="commentt">
+                    <i class="fas fa-comment"></i>
+                </section>
+                <section id="share">
+                    <i class="fas fa-share"></i>
+                </section>
+            </section>
+            <section id= "save">
+                <i class="fas fa-bookmark"></i>
+            </section>
+        </section>
+
+        <section>
+            <section id="likes">
+                <h4>{{i.likes}} likes</h4>
+            </section>
+        </section>
+
+        <section id="comment1">
+            <section id="userr">
+                <h4> <b>{{i.user.get('username')}}</b></h4>
+            </section>
+            <p>{{i.title}}</p>
+        </section>
+
+        {% if (i.comments)|length < 2 %}
+            {% for c in i.comments %}
+            <section id="comment1">
+                <section id="userr">
+                    <h4><b>{{c.user.get('username')}}</b></h4>
+                </section>
+                <p>{{c.text}}</p>
+            </section>
+            {% endfor %}
+        {% else %}
+            <section>
+                <a href="" style="text-decoration: none;">View all {{(i.comments)|length}} comments</a>
+            </section>
+            <section id ="comment1">
+                <section id = "userr">
+                    <h4> <b>{{i.comments[0].user.get('username')}} </b></h4>
+                </section>
+                <p>{{i.comments[0].text}}</p>
+            </section>
+                
+        {% endif %}
+
+        <section id= "addcomment">
+            <section id="comment">
+                <section id="emoji">
+                    <i class="far fa-smile"></i>
+                </section>
+                <section id="actualcomment">
+                    <h3>Add a comment...</h3>
+                </section>
+            </section>
+            <section id="post">
+                <a href="" style="text-decoration: none;">Post</a>
+            </section>
+        </section>
+
+    </section>
+{% endfor %}
+</section>
+</section>

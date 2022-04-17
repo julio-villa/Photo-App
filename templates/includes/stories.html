@@ -1,0 +1,14 @@
+<div id="circle2">
+    <section id = "Stories">
+        {% for i in stories %}
+        <section id="story">
+            <section id="story1">
+                <img src="{{i.user.get('profile_url')}}" alt="{{ i.user.get('username') }}'s profile picture">
+            </section>
+            <section id ="user1">
+                <h4>{{ i.user.get('username') }}</h4>
+            </section>
+        </section>
+        {% endfor %}
+    </section>
+</div>

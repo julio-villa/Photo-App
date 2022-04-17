@@ -1,0 +1,38 @@
+<div class="example">
+    <section id="Recpanel">
+        <section id="suggestionstop">
+            <section id= "pic1">
+                <!-- <img src="https://i.picsum.photos/id/447/200/300.jpg?hmac=WubV-ZWbMgXijt9RLYedmkiaSer2IFiVD7xek928gC8" height = "65"
+            width="65">  -->
+            <img src="{{user.get('profile_url')}}" height = "75" width="75" alt="{{ user.get('username') }}'s profile picture">
+            </section>
+            <section id="user1">
+                <h2> {{ user.get('username') }} </h2>
+            </section>
+        </section>
+        
+        <section id="Suggestions">
+            <h4> Suggestions for you</h4>
+        </section>
+        
+        {% for i in suggestions %}
+            <section id= "Suggestion1">
+                <section>
+                    <img src="{{i.get('profile_url')}}" alt="{{ i.get('username') }}'s profile picture">
+                </section>
+                <section>
+                    <section id="usern"> 
+                        <h4>{{ i.get('username') }}</h4>
+                    </section>
+                    <section id="suggest1">
+                        <h5> suggested for you</h5> 
+                    </section>
+                </section>
+                <section id="follow">
+                    <a href="" style="text-decoration: none;">follow</a>
+                </section>
+            </section>
+        {% endfor %}    
+        
+    </section>
+</div>

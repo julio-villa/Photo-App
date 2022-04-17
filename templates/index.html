@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<style>
+    @media screen and (max-width: 950px) {
+      div.example {
+        display: none;
+      }
+    }
+    </style>
+
+<style>
+    section{
+        border:none;
+    }
+</style>
+<style>
+    #POST{
+        width: 60vw;
+    }
+</style>
+<style>
+    #Posts img{
+        width: 40vw;
+        height: auto;
+    }
+</style>
+
+<body>
+    <main>
+        {% include 'includes/suggestions.html' %}
+        
+        {% include 'includes/navbar.html' %}
+
+        {% include 'includes/stories.html' %}
+        
+        {% include 'includes/cards.html' %}
+
+    </main>  
+</body>
+</html>
+
+<!-- Accessibility Prompt Response:
+I would add a feature that prompts the user to add alt text everytime they make a post. Before posting a picture, a screen would
+show up asking the user to add alt text. This makes it so that people don't have to look through their settings after making a post 
+trying to find the option.  -->
