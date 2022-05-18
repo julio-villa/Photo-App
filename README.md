@@ -1,5 +1,5 @@
 ## Interacting with the app
-The user data in this app is generated randomly. For testing and interacting with the app, use the username: 'webdev' and the password: 'password'.
+The user data in this app is generated randomly. For testing and interacting with the app, use the username: 'username' and the password: 'password'.
 
 ## Installation
 To install dependencies, navigate to your `photo-app` directory on your command line and issue the following commands:
@@ -11,6 +11,8 @@ pip3 install -r requirements.txt
 # python3 -m pip install -r requirements.txt
 # python -m pip install -r requirements.txt
 ```
+Depending on your python interpreter/environment, you might have to install some of the packages using a different package management system.
+Ex. "conda install psycopg2" etc.
 
 ## Running your Flask Server
 
@@ -31,5 +33,3 @@ flask run
 # python3 -m flask run
 # python -m flask run
 ```
-Depending on your interpreter/environment, you might have to install some of the packages using a different package management system.
-Ex. "conda install psycopg2" etc

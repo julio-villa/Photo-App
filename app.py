@@ -43,7 +43,6 @@ api = Api(app)
 @jwt.user_lookup_loader
 def user_lookup_callback(_jwt_header, jwt_data):
     # print('JWT data:', jwt_data)
-    # https://flask-jwt-extended.readthedocs.io/en/stable/automatic_user_loading/
     user_id = jwt_data["sub"]
     return User.query.filter_by(id=user_id).one_or_none()
 

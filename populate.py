@@ -41,7 +41,7 @@ def _create_webdev_user():
     # 1. generate fake user data
     first_name = 'Webdev'
     last_name = 'User'
-    username = 'webdev'
+    username = 'username'
     email = 'webdev@u.northwestern.edu'
     
     # 2. create a new user (DB object)

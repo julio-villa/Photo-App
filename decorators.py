@@ -9,6 +9,5 @@ def jwt_or_login(view_function):
         except:
             return redirect('/login', code=302)
             
-    # https://stackoverflow.com/questions/17256602/assertionerror-view-function-mapping-is-overwriting-an-existing-endpoint-functi
     wrapper.__name__ = view_function.__name__
     return wrapper 
